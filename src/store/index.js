@@ -9,6 +9,8 @@ const counterReducer = (state = initState, action) => {
 
   if (action.type === 'UP') {
     return { counterValue: state.counterValue + 1 };
+  } else if (action.type === 'DOWN') {
+    return { counterValue: state.counterValue - 1 };
   }
 
   return state;
