@@ -1,19 +1,23 @@
 import { legacy_createStore as createStore } from 'redux';
 
-const initState = { counterValue: 10 };
+const initState = { counterValue: 10, showCounter: true };
 
 // reducer fn
 const counterReducer = (state = initState, action) => {
   console.log('state ===', state);
   console.log('action ===', action);
 
-  if (action.type === 'UP') {
-    return { counterValue: state.counterValue + 1 };
-  } else if (action.type === 'DOWN') {
-    return { counterValue: state.counterValue - 1 };
-  }
+  switch (action.type) {
+    case 'UP':
+      return { ...state, counterValue: state.counterValue + 1 };
+    case 'DOWN':
+      return { ...state, counterValue: state.counterValue - 1 };
+    case 'UP_BY':
+      return { ...state, counterValue: state.counterValue + action.payload };
 
-  return state;
+    default:
+      return state;
+  }
 };
 
 // sukuriam pagr reducer kintamaji
