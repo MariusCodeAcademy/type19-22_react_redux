@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import Button from './UI/Button';
+import { cActions } from '../store';
 
 const Counter = () => {
   // nuskaidom redux counter data
@@ -12,7 +13,8 @@ const Counter = () => {
   const dispatch = useDispatch();
 
   const goUp = () => {
-    dispatch({ type: 'UP' });
+    // dispatch({ type: 'UP' });
+    dispatch(cActions.up()); // pridadamas unikalus id
   };
 
   // goDown
