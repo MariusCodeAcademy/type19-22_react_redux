@@ -4,6 +4,9 @@ const initState = { counterValue: 10, showCounter: true };
 
 // reducer fn
 const counterReducer = (state = initState, action) => {
+  // niedada tiesiogiai nemodifikuojam state
+  // state.counterValue++ // no no
+  // state.showCounter = true // no no
   console.log('state ===', state);
   console.log('action ===', action);
 
