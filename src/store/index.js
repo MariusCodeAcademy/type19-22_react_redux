@@ -1,9 +1,11 @@
-import { createStore } from 'redux';
+import { legacy_createStore as createStore } from 'redux';
 
-const initState = { counterValue: 0 };
+const initState = { counterValue: 10 };
 
 // reducer fn
-const counterReducer = (state = initState, action) => {};
+const counterReducer = (state = initState, action) => {
+  return state;
+};
 
 // sukuriam pagr reducer kintamaji
 const store = createStore(counterReducer);
