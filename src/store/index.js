@@ -14,8 +14,10 @@ const counterReducer = (state = initState, action) => {
       return { ...state, counterValue: state.counterValue - 1 };
     case 'UP_BY':
       return { ...state, counterValue: state.counterValue + action.payload };
-
+    case 'TOGGLE':
+      return { ...state, showCounter: !state.showCounter };
     default:
+      console.warn(`toks veiksmas nerastas "${action.type}"`);
       return state;
   }
 };

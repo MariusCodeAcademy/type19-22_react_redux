@@ -24,9 +24,13 @@ const Counter = () => {
     dispatch({ type: 'UP_BY', payload: arg });
   };
 
+  const toggleLabel = () => {
+    dispatch({ type: 'TOGGLE' });
+  };
+
   return (
     <div className='bg-white border p-6 rounded-md inline-block mt-7 shadow-md'>
-      <Button>toggle label</Button>
+      <Button onClick={toggleLabel}>toggle label</Button>
       {toShow && (
         <>
           <h2 className='text-2xl'>Push ups</h2>

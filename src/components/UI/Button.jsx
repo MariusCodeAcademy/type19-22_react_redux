@@ -2,7 +2,7 @@ const Button = ({ children, onClick = () => {} }) => {
   return (
     <button
       onClick={onClick}
-      className='border border-indigo-800 rounded-md px-2 py-1 bg-indigo-300 text-white'>
+      className='bg-blue-500 hover:bg-blue-700 text-white  py-2 px-4 rounded'>
       {children}
     </button>
   );
