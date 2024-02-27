@@ -4,6 +4,13 @@ const initState = { counterValue: 10 };
 
 // reducer fn
 const counterReducer = (state = initState, action) => {
+  console.log('state ===', state);
+  console.log('action ===', action);
+
+  if (action.type === 'UP') {
+    return { counterValue: state.counterValue + 1 };
+  }
+
   return state;
 };
 
