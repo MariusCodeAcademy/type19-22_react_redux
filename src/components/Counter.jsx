@@ -1,4 +1,4 @@
-const Coutner = () => {
+const Counter = () => {
   return (
     <div className='bg-white border p-6 rounded-md inline-block mt-7 shadow-md'>
       <h2 className='text-2xl'>Push ups</h2>
@@ -15,4 +15,4 @@ const Coutner = () => {
   );
 };
 
-export default Coutner;
+export default Counter;
