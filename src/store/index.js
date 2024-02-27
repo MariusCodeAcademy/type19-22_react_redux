@@ -52,4 +52,7 @@ const store = configureStore({
 
 export const cActions = counterSlice.actions;
 console.log('counterActions ===', cActions);
+
+export const authAction = authSlice.actions;
+console.log('authAction ===', authAction);
 export default store;

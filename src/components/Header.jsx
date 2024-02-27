@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 
 export default function Header() {
-  const counter = useSelector((state) => state.counterValue);
+  const counter = useSelector((state) => state.counter.counterValue);
   return (
     <header className='bg-slate-300'>
       <div className='container flex justify-between items-center'>
