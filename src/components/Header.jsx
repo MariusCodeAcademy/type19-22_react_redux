@@ -1,9 +1,13 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { authAction } from '../store';
 
 export default function Header() {
   const counter = useSelector((state) => state.counter.counterValue);
   const isAuth = useSelector((state) => state.auth.isLoggedIn);
   console.log('isAuth ===', isAuth);
+
+  const dispatch = useDispatch();
+
   return (
     <header className='bg-slate-300'>
       <div className='container flex justify-between items-center'>
@@ -23,7 +27,11 @@ export default function Header() {
             </a>
           )}
           {isAuth && (
-            <span className='text-lg p-3 hover:bg-slate-700 hover:text-white'>Logout</span>
+            <span
+              onClick={() => dispatch(authAction.loguot())}
+              className='text-lg p-3 hover:bg-slate-700 hover:text-white'>
+              Logout
+            </span>
           )}
         </nav>
       </div>
