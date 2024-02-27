@@ -19,15 +19,18 @@ const Counter = () => {
 
   // goDown
   const goDown = () => {
-    dispatch({ type: 'DOWN' });
+    dispatch(cActions.down());
   };
   // padidinti reiksme argumentu
   const upBy = (arg) => {
-    dispatch({ type: 'UP_BY', payload: arg });
+    // dispatch({ type: 'UP_BY', payload: arg });
+    console.log('cActions.upBy(arg) ===', cActions.upBy(arg));
+    dispatch(cActions.upBy(arg));
   };
 
   const toggleLabel = () => {
-    dispatch({ type: 'TOGGLE' });
+    console.log('cActions.toggle() ===', cActions.toggle());
+    dispatch(cActions.toggle());
   };
 
   return (

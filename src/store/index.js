@@ -15,35 +15,17 @@ const counterSlice = createSlice({
       state.counterValue++;
     },
     down(state) {
-      state.showCounter = state.counterValue - 1;
+      state.counterValue = state.counterValue - 1;
     },
-    upBy() {},
-    toggle() {},
+    upBy(state, action) {
+      console.log('action ===', action);
+      state.counterValue += action.payload;
+    },
+    toggle(state) {
+      state.showCounter = !state.showCounter;
+    },
   },
 });
-
-// reducer fn
-// const counterReducer = (state = initState, action) => {
-//   // niedada tiesiogiai nemodifikuojam state
-//   // state.counterValue++ // no no
-//   // state.showCounter = true // no no
-//   console.log('state ===', state);
-//   console.log('action ===', action);
-
-//   switch (action.type) {
-//     case 'UP':
-//       return { ...state, counterValue: state.counterValue + 1 };
-//     case 'DOWN':
-//       return { ...state, counterValue: state.counterValue - 1 };
-//     case 'UP_BY':
-//       return { ...state, counterValue: state.counterValue + action.payload };
-//     case 'TOGGLE':
-//       return { ...state, showCounter: !state.showCounter };
-//     default:
-//       console.warn(`toks veiksmas nerastas "${action.type}"`);
-//       return state;
-//   }
-// };
 
 // sukuriam pagr reducer kintamaji
 const store = configureStore({
