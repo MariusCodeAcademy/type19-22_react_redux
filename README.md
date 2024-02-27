@@ -1,29 +1,6 @@
-# Steps to Redux
+# Praktika
 
-1. `npm install redux react-redux`
-2. sukurti store/index.js faila kur bus redux kodas
-3. aprasom reducer funkcija ir exportuojam store
-4. suteikiam globalu state visai musu aplikacijai
+url https://github.com/MariusCodeAcademy/type19-14_react_useReducer
 
-```js
-<Provider store={store}>
-  <App />
-</Provider>
-```
-
-5. pasiimti reiksme is redux
-
-```js
-const counterValFromStore = useSelector((state) => state.counterValue);
-```
-
-6. atlikti veiksma naudojant redux
-
-```js
-// atlikti veiksma su redux naudojam dispatch
-const dispatch = useDispatch();
-
-const goUp = () => {
-  dispatch({ type: 'UP' });
-};
-```
+1. perdaryti 14_react_useReducer\src\components\counter\CounterBetter.jsx kad naudotu redux is store
+2. perdaryti src\components\todos\TodoApp.jsx kad veiktu su store
