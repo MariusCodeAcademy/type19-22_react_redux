@@ -44,7 +44,10 @@ const counterSlice = createSlice({
 
 // sukuriam pagr reducer kintamaji
 const store = configureStore({
-  reducer: counterSlice.reducer,
+  reducer: {
+    counter: counterSlice.reducer,
+    auth: authSlice.reducer,
+  },
 });
 
 export const cActions = counterSlice.actions;

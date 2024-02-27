@@ -4,10 +4,13 @@ import { cActions } from '../store';
 
 const Counter = () => {
   // nuskaidom redux counter data
-  const counterValFromStore = useSelector((state) => state.counterValue);
+  const counterValFromStore = useSelector((state) => {
+    console.log('state ===', state);
+    return state.counter.counterValue;
+  });
   console.log('counterValFromStore ===', counterValFromStore);
   // pasiimti showCounter reiksme
-  const toShow = useSelector((state) => state.showCounter);
+  const toShow = useSelector((state) => state.counter.showCounter);
   console.log('toShow ===', toShow);
   // atlikti veiksma su redux naudojam dispatch
   const dispatch = useDispatch();
