@@ -2,6 +2,21 @@
 
 import { createSlice, configureStore } from '@reduxjs/toolkit';
 
+const initAuthState = { isLoggedIn: false, email: '' };
+
+const authSlice = createSlice({
+  name: 'auth',
+  initialState: initAuthState,
+  reducers: {
+    login(state) {
+      state.isLoggedIn = true;
+    },
+    loguot(state) {
+      state.isLoggedIn = false;
+    },
+  },
+});
+
 const initCounterState = { counterValue: 5, showCounter: true };
 
 // createSlice.reducer naudoja vidini paketa immer kuris neleidzia mutuoti state
