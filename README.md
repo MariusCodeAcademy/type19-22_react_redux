@@ -10,3 +10,20 @@
   <App />
 </Provider>
 ```
+
+5. pasiimti reiksme is redux
+
+```js
+const counterValFromStore = useSelector((state) => state.counterValue);
+```
+
+6. atlikti veiksma naudojant redux
+
+```js
+// atlikti veiksma su redux naudojam dispatch
+const dispatch = useDispatch();
+
+const goUp = () => {
+  dispatch({ type: 'UP' });
+};
+```
